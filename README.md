@@ -68,8 +68,8 @@ Register two Azure AD Applications in your tenant's directory.
   1. **Serviceplan Name**: the name of the serviceplan
   2. **Key Vault Name**: the name of the keyvault, where we will store the secrets
   3. **Bot Name**: The name of the bot.
-  4. **Msa App Id**: The application (client) ID of the app registration that you created before
-  5. **Msa App Secret**: The client secret of the app registration that you created before
+  4. **Msa App Id**: The application (client) ID of the first app registration that you created before
+  5. **Msa App Secret**: The client secret of the first app registration that you created before
 
 > To create the App Service, we use the name of the Bot. So the name of the Bot must be available.
 
@@ -83,9 +83,20 @@ Now that we've created all the necessary resources, it's time to deploy the bot.
 1. Start by downloading this repository.
 2. Navigate to the **appsettings.json** file, which can be found in Solution/Ollie
 3. Fill in all the required information.
-4. Next navigate to the **manifest.json** file, which can be found in Solution/Ollie/Manifest
-5. Fill in the id parameter.
-6. Deploy the bot to the **App Service** we've previously created.
+
+   - **MicrosoftAppId**: The application (client) ID of the first app registration that you created before
+   - **MicrosoftAppPassword**: The client secret of the first app registration that you created before
+   - **Tenant**: TenantID
+   - **ClientId**: Client ID of the Configuration App
+   - **ClientSecret**: Secret of the Configuration App
+   - **WorkspaceId**: Id of the Azure Sentinel Log Analytics workspace
+   - **SubscriptionId**: Azure subscription ID
+   - **ResourcegroupName**: Resourcegroupname of where de Azure sentinel workspace is located.
+   - **WorkspaceName**: Name of the Azure Sentinel workspace
+
+5. Next navigate to the **manifest.json** file, which can be found in Solution/Ollie/Manifest
+6. Fill in the id parameter.
+7. Deploy the bot to the **App Service** we've previously created.
 
 To deploy the bot you can use Visualstudio or follow the instruction from the [documentation](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-deploy-az-cli?view=azure-bot-service-4.0&tabs=csharp#deploy-the-bot-to-azure)
 
