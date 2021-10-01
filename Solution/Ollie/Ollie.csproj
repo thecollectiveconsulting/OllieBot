@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>Ollie</AssemblyName>
+    <RootNamespace>Ollie</RootNamespace>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="AdaptiveCards" Version="2.7.2" />
+    <PackageReference Include="AdaptiveCards.Templating" Version="1.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.Luis" Version="4.14.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.14.1" />
+    <PackageReference Include="Microsoft.Graph" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Cards\" />
+    <Folder Include="Manifest\" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="powershell.exe Compress-Archive -Path \&quot;$(ProjectDir)Manifest\*\&quot; -DestinationPath \&quot;$(TargetDir)Ollie.zip\&quot; -Force" />
+  </Target>
+
+
+</Project>

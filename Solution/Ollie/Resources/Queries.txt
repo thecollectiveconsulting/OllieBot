@@ -1,0 +1,48 @@
+﻿// IP Queries
+
+imAuthentication
+| where SrcDvcIpAddr == "84.199.233.161"
+| where TimeGenerated  > ago(90d)
+
+imAuthentication
+| where TargetDvcIpAddr == "84.199.233.161"
+| where TimeGenerated  > ago(90d)
+
+imFileEvent
+| where SrcIpAddr == "84.199.233.161"
+| where TimeGenerated  > ago(90d)
+
+imDns
+| where SrcIpAddr == "84.199.233.161"
+| where TimeGenerated  > ago(90d)
+
+// Url Queries
+
+imAuthentication
+| where TargetUrl == ""
+| where TimeGenerated  > ago(90d)
+
+imFileEvent
+| where TargetUrl == ""
+| where TimeGenerated  > ago(90d)
+
+// Domain Queries
+
+
+
+imDns
+| where DnsQuery == ""
+| where TimeGenerated  > ago(90d)
+
+// FileHash Queries
+imProcess
+| where Hash == ""
+| where TimeGenerated  > ago(90d)
+
+imFileEvent
+| where SrcFileMD5 == "" 
+     or SrcFileSHA1 == ""
+     or SrcFileSHA256 == ""
+     or SrcFileSHA512 == ""
+     or Hash == ""
+| where TimeGenerated  > ago(90d)

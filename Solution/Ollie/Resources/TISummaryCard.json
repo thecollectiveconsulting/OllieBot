@@ -1,0 +1,88 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "${title}"
+    },
+    {
+      "type": "TextBlock",
+      "text": "${$root.description}",
+      "wrap": true
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "Action:",
+          "value": "${action}"
+        },
+        {
+          "title": "Expiration Date:",
+          "value": "${expirationDateTime}"
+        },
+        {
+          "title": "Threattype:",
+          "value": "${threattype}"
+        },
+        {
+          "title": "TlpLevel",
+          "value": "${tlplevel}"
+        }
+      ]
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "FileHashType",
+          "value": "${FileHashType}"
+        },
+        {
+          "title": "FileHashValue",
+          "value": "${FileHashValue}"
+        }
+      ],
+      "height": "stretch",
+      "$when": "${fileHashType != ''}",
+      "separator": true
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "NetworkDestinationIPv4:",
+          "value": "${networkDestinationIPv4}"
+        }
+      ],
+      "$when": "${networkDestinationIPv4!= ''}",
+      "separator": true
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "Domain:",
+          "value": "${domain}"
+        }
+      ],
+      "$when": "${domain!= ''}",
+      "separator": true
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "Url:",
+          "value": "${url}"
+        }
+      ],
+      "$when": "${url != ''}",
+      "separator": true
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.3"
+}

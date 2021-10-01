@@ -1,0 +1,150 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.3",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "Create a Threat Indicator",
+      "horizontalAlignment": "Center",
+      "wrap": true
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "Action",
+      "value": "1",
+      "choices": [
+        {
+          "title": "unknown",
+          "value": "unknown"
+        },
+        {
+          "title": "allow",
+          "value": "allow"
+        },
+        {
+          "title": "block",
+          "value": "block"
+        },
+        {
+          "title": "alert",
+          "value": "alert"
+        }
+      ],
+      "label": "What Action do you want to configure?",
+      "isRequired": true,
+      "errorMessage": "Please select an Action!"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "ThreatType",
+      "value": "1",
+      "choices": [
+        {
+          "title": "Botnet",
+          "value": "botnet"
+        },
+        {
+          "title": "C2",
+          "value": "c2"
+        },
+        {
+          "title": "CryptoMining",
+          "value": "cryptomining"
+        },
+        {
+          "title": "Darknet",
+          "value": "darknet"
+        },
+        {
+          "title": "DDos",
+          "value": "ddos"
+        },
+        {
+          "title": "MaliciousUrl",
+          "value": "maliciousurl"
+        },
+        {
+          "title": "Malware",
+          "value": "malware"
+        },
+        {
+          "title": "Phishing",
+          "value": "phishing"
+        },
+        {
+          "title": "Proxy",
+          "value": "proxy"
+        },
+        {
+          "title": "PUA",
+          "value": "pua"
+        },
+        {
+          "title": "WatchList",
+          "value": "watchlist"
+        }
+      ],
+      "isRequired": true,
+      "errorMessage": "Please select an Threat type",
+      "label": "Threat Type?"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "TlpLevel",
+      "value": "1",
+      "choices": [
+        {
+          "title": "unknown",
+          "value": "unknown"
+        },
+        {
+          "title": "white",
+          "value": "white"
+        },
+        {
+          "title": "green",
+          "value": "green"
+        },
+        {
+          "title": "amber",
+          "value": "amber"
+        },
+        {
+          "title": "red",
+          "value": "red"
+        }
+      ],
+      "label": "TlpLevel?",
+      "isRequired": true,
+      "errorMessage": "Please select an TlpLevel"
+    },
+    {
+      "type": "Input.Date",
+      "id": "ExpirationDateTime",
+      "value": "${expiration}",
+      "label": "Expiration Date?",
+      "isRequired": true,
+      "errorMessage": "Please select an expiration date!"
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "IP",
+      "id": "NetworkDestinationIPv4",
+      "isRequired": true,
+      "label": "Please Provide an IP address",
+      "errorMessage": "Please enter a IP"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Submit",
+      "data": {
+        "id": "1234567890"
+      }
+    }
+  ]
+}

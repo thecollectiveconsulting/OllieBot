@@ -1,0 +1,51 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.3",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Please select the type of indicator you want to create or click stop to cancel.",
+      "weight": "Bolder",
+      "wrap": true,
+      "horizontalAlignment": "Center"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "IP",
+      "data": {
+        "id": "IP"
+      }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Domain",
+      "data": {
+        "id": "Domain"
+      }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Url",
+      "data": {
+        "id": "Url"
+      }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "FileHash",
+      "data": {
+        "id": "FileHash"
+      }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Stop",
+      "data": {
+        "id": "Stop"
+      }
+    }
+  ]
+}

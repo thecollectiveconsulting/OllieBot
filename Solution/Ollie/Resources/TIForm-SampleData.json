@@ -1,0 +1,129 @@
+{
+  "ParticipantInfoForm": {
+    "title": "Create a Threat Indicator"
+  },
+  "Survey": {
+
+    "questions": [
+      {
+        "question": "What kind of TI do you want to create?",
+        "items": [
+          {
+            "choice": "IP",
+            "value": "ip"
+          },
+          {
+            "choice": "Domain",
+            "value": "domain"
+          },
+          {
+            "choice": "Url",
+            "value": "url"
+          },
+          {
+            "choice": "FileHash",
+            "value": "filehash"
+          }
+        ]
+      },
+      {
+        "question": "What Action do you want to configure?",
+        "items": [
+          {
+            "choice": "unknown",
+            "value": "unkown"
+          },
+          {
+            "choice": "allow",
+            "value": "allow"
+          },
+          {
+            "choice": "block",
+            "value": "block"
+          },
+          {
+            "choice": "alert",
+            "value": "alert"
+          }
+        ]
+      },
+      {
+        "question": "Threat Type?",
+        "items": [
+          {
+            "choice": "Botnet",
+            "value": "botnet"
+          },
+          {
+            "choice": "C2",
+            "value": "c2"
+          },
+          {
+            "choice": "CryptoMining",
+            "value": "cryptomining"
+          },
+          {
+            "choice": "Darknet",
+            "value": "darknet"
+          },
+          {
+            "choice": "DDos",
+            "value": "ddos"
+          },
+          {
+            "choice": "MaliciousUrl",
+            "value": "maliciousurl"
+          },
+          {
+            "choice": "Malware",
+            "value": "malware"
+          },
+          {
+            "choice": "Phishing",
+            "value": "phishing"
+          },
+          {
+            "choice": "Proxy",
+            "value": "proxy"
+          },
+          {
+            "choice": "PUA",
+            "value": "pua"
+          },
+          {
+            "choice": "WatchList",
+            "value": "watchlist"
+          }
+        ]
+      },
+      {
+        "question": "TlpLevel?",
+        "items": [
+          {
+            "choice": "unknown",
+            "value": "unknown"
+          },
+          {
+            "choice": "white",
+            "value": "white"
+          },
+          {
+            "choice": "green",
+            "value": "green"
+          },
+          {
+            "choice": "amber",
+            "value": "amber"
+          },
+          {
+            "choice": "red",
+            "value": "red"
+          }
+        ]
+      },
+      {
+        "question": "Red cars are better than other cars"
+      }
+    ]
+  }
+}

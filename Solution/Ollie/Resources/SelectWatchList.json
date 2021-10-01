@@ -1,0 +1,32 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.3",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "Watchlists",
+      "horizontalAlignment": "Center",
+      "wrap": true
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "CompactSelectVal",
+      "value": "1",
+      "choices": [
+        <PLACEHOLDER>
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Submit",
+      "data": {
+        "id": "SelectWatchList"
+      }
+    }
+  ]
+}

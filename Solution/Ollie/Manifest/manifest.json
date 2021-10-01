@@ -1,0 +1,42 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "version": "1.0.0",
+  "id": "<MicrosoftAppId>",
+  "packageName": "com.thecollective.ollie",
+  "developer": {
+    "name": "TheCollective",
+    "websiteUrl": "https://thecollective.eu",
+    "privacyUrl": "https://thecollective.eu/privacy-policy/",
+    "termsOfUseUrl": "https://thecollective.eu/privacy-policy/"
+  },
+  "name": {
+    "short": "Ollie",
+    "full": "Ollie, you personal Azure Sentinel Assistant"
+  },
+  "description": {
+    "short": "Ollie, your personal Azure Sentinel assistant! By using Ollie, you manage your Azure Sentinel environment from the comfort of a Teams client. Use Ollie to easily interact with Azure Sentinel without having to navigate to the different portal",
+    "full": "Ollie, your personal Azure Sentinel assistant! Ollie is a Teams bot which allows you to interact with Azure Sentinel and execute tasks from within your Teams client. Ollie will help you to add new Threat Intelligence Indicators and configure watchlists without having to navigate to the Azure Sentinel portal. This cuts the time it takes to add new configurations significantly, allowing you to spend more time on the tasks that matter."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#ED692B",
+  "staticTabs": [],
+  "configurableTabs": [],
+  "bots": [
+    {
+      "botId": "",
+      "needsChannelSelector": false,
+      "isNotificationOnly": false,
+      "scopes": [
+        "team",
+        "personal"
+      ]
+    }
+  ],
+  "composeExtensions": [],
+  "permissions": [],
+  "validDomains": []
+}
