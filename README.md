@@ -52,9 +52,9 @@ Register two Azure AD Applications in your tenant's directory.
 
 9. grant Access to the Azure Sentinel resource.
   
-  1. Navigate to the Azure Sentinel Log Analytics workspace
-  2. Select **Access Control(IAM)**
-  3. Add the configuration app, with the **Azure Sentinel Contributer** role
+   1. Navigate to the Azure Sentinel Log Analytics workspace
+   2. Select **Access Control(IAM)**
+   3. Add the configuration app, with the **Azure Sentinel Contributer** role
 
 ### Deploy ARM to your Azure subscription
 
