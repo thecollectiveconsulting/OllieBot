@@ -60,7 +60,7 @@ Register two Azure AD Applications in your tenant's directory.
 
 1. Click on the **Deploy to Azure** button, this will help you deploy all the needed resources.
 
-   [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fthecollectiveconsulting%2FOllie%2Fmain%2FARMTemplates%2FazureDeploy.json)
+   [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fthecollectiveconsulting%2FOlliebot%2Fmain%2FARMTemplates%2FazureDeploy.json)
 
 2. Select a subscription and resource group, we recommend creating a new resource group.
 3. Fill in the required fields:
